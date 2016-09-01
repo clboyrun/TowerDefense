@@ -24,6 +24,7 @@ public class MyRadialMenu : MonoBehaviour {
             newButton.icon.sprite = obj.options[i].sprite;
             newButton.text.text = obj.options[i].title;
             newButton.onClickMessage = obj.options[i].messageOnClick;
+            newButton.myMenu = this;
         }
     }
 
@@ -31,6 +32,9 @@ public class MyRadialMenu : MonoBehaviour {
     {
         if(Input.GetMouseButtonUp(0))
         {
+            if (buttonSelected)
+            { buttonSelected.gameObject.SendMessage(buttonSelected.onClickMessage); }
+
             Destroy(gameObject);
         }
     }

@@ -27,7 +27,7 @@ public class MyBuildManager : MonoBehaviour
             isInMenu = true;
 
             fpcontroller.m_MouseLook.SetCursorLock(!isInMenu);
-            fpcontroller.m_CharacterController.enabled = (!isInMenu);
+            //fpcontroller.m_CharacterController.enabled = (!isInMenu);
         }
         else if ((isInMenu == true) && (menuLevel == 0) && (Input.GetMouseButtonDown(1)))
         {
@@ -35,7 +35,7 @@ public class MyBuildManager : MonoBehaviour
             isInMenu = false;
 
             fpcontroller.m_MouseLook.SetCursorLock(!isInMenu);
-            fpcontroller.m_CharacterController.enabled = (!isInMenu);
+            //fpcontroller.m_CharacterController.enabled = (!isInMenu);
         }
     }
 }
