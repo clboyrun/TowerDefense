@@ -6,10 +6,13 @@ public class MyRadialMenu : MonoBehaviour {
 
     public MyRadialButton buttonPrefab;
     public MyRadialButton buttonSelected;
+    private GameObject sourceObject;
 
     // Use this for initialization
     public void SpawnButtons(MyRadialInteractable obj)
     {
+        sourceObject = obj.gameObject;
+
         for (int i = 0; i < obj.options.Length; i++)
         {
             MyRadialButton newButton = Instantiate(buttonPrefab) as MyRadialButton;
@@ -33,7 +36,7 @@ public class MyRadialMenu : MonoBehaviour {
         if(Input.GetMouseButtonUp(0))
         {
             if (buttonSelected)
-            { buttonSelected.gameObject.SendMessage(buttonSelected.onClickMessage); }
+            { sourceObject.SendMessage(buttonSelected.onClickMessage); }
 
             Destroy(gameObject);
         }

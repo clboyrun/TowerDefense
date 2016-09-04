@@ -177,6 +177,7 @@
      <Compile Include="Assets\My Shit\Scripts\MyRadialInteractable.cs" />
      <Compile Include="Assets\My Shit\Scripts\MyRadialMenu.cs" />
      <Compile Include="Assets\My Shit\Scripts\MyRadialMenuSpawner.cs" />
+     <Compile Include="Assets\My Shit\Scripts\MyTower.cs" />
      <Compile Include="Assets\My Shit\Scripts\SpawnManager.cs" />
      <Compile Include="Assets\TDTK_Free\Scripts\AudioManager.cs" />
      <Compile Include="Assets\TDTK_Free\Scripts\BuildManager.cs" />
